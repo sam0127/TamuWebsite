@@ -44,9 +44,15 @@ footer a:hover {
 
 .flex-container {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  height: 200px;
+  height: 50%;
+  width: 100%;
+}
+
+.gallery {
+  display: block;
 }
 
 .hero-image {
@@ -81,6 +87,16 @@ footer a:hover {
 
 .community {
   background: #FFFFFF;
+}
+
+.resize {
+  width 400px;
+  height: auto;
+}
+
+.resize {
+  width: 300px;
+  height: auto;
 }
 
 </style>
@@ -138,6 +154,11 @@ footer a:hover {
     regionals, our team took first place overall, and first place in speed
     climbing. <a href="https://tamuclimbing.wordpress.com/">More about A&M
       Climbing Team</a></p>
+    <div class="flex-container">
+      <div>
+        <img class="resize" src="./resources/Climbportrait.jpg"/>
+      </div>
+    </div>
     <h3>Peer teaching</h3>
     <p>I have been a Peer Teacher for ENGR-102 for two years now. I enjoy peer
     teaching because it is important to me to help students learn and understand
@@ -148,6 +169,11 @@ footer a:hover {
     <p>Before coming to college I became an eagle scout in the Boy Scouts of
     America. For my project, I planned and built a lean-to shed for the
     non-profit organization <a href="https://ranchhandrescue.org">Ranch Hands Rescue</a>.</p>
+    <div class="flex-contianer">
+        <img class="resize" src="./resources/ESframe1.jpg">
+        <img class="resize" src="./resources/ESframe2.jpg">
+        <img class="resize" src="./resources/ESgroup.jpg">
+    </div>
   </div>
 </div>
 
@@ -172,13 +198,19 @@ footer a:hover {
        href="https://drive.google.com/open?id=0B-B6YsTiV-LkLVFQcnNSOWNCYms">Here</a>
     is a video of it in action.
     </p>
+    <h3>Interests</h3>
+    <p>One of my main interests is combining my passion for music and software
+    development. <a href="http://www.music-software-development.com/">This</a>
+    website provides some methods for reading MIDI data. <a
+                    href="https://juce.com/">Juce</a> is a C++ library that
+                  helps in audio applications.</p>
   </div>
 </div>
 
 <!--professional info-->
 <div id="professionalinfo" class="professionalinfo">
   <div class="container text-center">
-    <h1>My info</h1>
+    <h1>Info</h1>
     <p>I am looking for an internship for Summer 2020. I am keeping my options
     open for the type of work I would like to do.</p>
     <a href="./resources/Resume.pdf">Resume</a>
