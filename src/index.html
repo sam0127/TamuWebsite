@@ -15,13 +15,35 @@ body, html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+footer {
+  background-color: #000000;
+  color: #f5f5f5;
+  padding: 70px;
+}
+
+footer a {
+  color: #f5f5f5;
+}
+footer a:hover {
+  color: #777;
+    text-decoration: none;
+}
+
 .container {
   padding: 80px 120px;
+  color: #404040
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
 }
 
 .hero-image {
   background-image: url("resources/darkmountains.jpg");
-  height: 95%;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -36,24 +58,21 @@ body, html {
   transform: translate(-50%, -50%);
   color: white;
 }
+
 .aboutme {
-  background: #2d2d30;
-  color: #bdbdbd;
+  background: #a7c4db;
 }
 
 .professional-info {
   background: #0000FF;
-  color: #000000;
 }
 
 .portfolio {
-  background: #2d2d30;
-  color: #bdbdbd;
+  background: #a7c4db;
 }
 
 .community {
   background: #FFFFFF;
-  color: #000000;
 }
 
 </style>
@@ -72,11 +91,11 @@ body, html {
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-left">
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#aboutme">ABOUT ME</a></li>
-        <li><a href="#professionalinfo">PROFESSIONAL</a></li>
-        <li><a href="#portfolio">PORTFOLIO</a></li>
-        <li><a href="#community">SERVICE</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#aboutme">About Me</a></li>
+        <li><a href="#professionalinfo">Info</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#community">Community</a></li>
       </ul>
     </div>
   </div>
@@ -85,7 +104,7 @@ body, html {
 <!--Home page-->
 <div id="home" class="hero-image">
   <div class="hero-text">
-    <h3>Sam Smith</h3>
+    <h1>Sam Smith</h1>
     <p>Home</p>
   </div>
 </div>
@@ -94,7 +113,8 @@ body, html {
 <div id="aboutme" class="aboutme">
   <div class="container text-center">
     <h3>About Me</h3>
-    <p>My name is sam</p>
+    <p>Howdy! My name is Sam Smith and I am a class of 2021 Computer Science
+    major. I have interests in both software engineering and cyber-security.</p>
   </div>
 </div>
 
@@ -117,18 +137,37 @@ body, html {
 </div>
 
 <!--service-->
-<div class="community">
+<div id="community" class="community">
   <div class="container text-center">
-    <h3>Community Involvement</h3>
+    <h1>Community Involvement</h1>
+    <h2>Eagle Scout</h2>
+    <p>Before coming to college I became an eagle scout in the Boy Scouts of
+    America. For my project, I planned and built a lean-to shed for the
+    non-profit organization <a href="https://ranchhandrescue.org">Ranch Hands Rescue</a>.</p>
+    <img>
     <h2>Climbing Team</h2>
-    <p>I like climbing</P>
+    <p>My freshman year, I joined the Texas A&M Climbing Team. I enjoy going to
+    competitions and climbing outside with my fellow climbers. Last year at
+    regionals, our team took first place overall, and first place in speed climbing.</p>
     <h2>Peer teaching</h2>
-    <p>I like being PT</p>
+    <p>I have been a Peer Teacher for ENGR-102 for two years now. I enjoy peer
+    teaching because it is important to me to help students learn and understand
+    material. I also help my students get acclimated to their first year at A&M
+    and in the engineering program.</p>
   </div>
 </div>
 
+<footer class="text-center">
+  <a class="up-arrow" href="#home" data-toggle="tooltip">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+</footer>
+
 <script>
 $(document).ready(function(){
+  //take me to the top arrow
+  $('[data-toggle="tooltip"]').tooltip();
+
   // Scrolling via navbar
   $(".navbar a, footer a[href='#home']").on('click', function(event) {
 
